@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Customer Perception Survey</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Arial, sans-serif;
+
+      background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a,
+        #2563eb
+      );
+    }
+
+    .card{
+
+      width:380px;
+
+      background: rgba(255,255,255,0.12);
+
+      backdrop-filter: blur(15px);
+
+      border:1px solid rgba(255,255,255,0.2);
+
+      border-radius:25px;
+
+      padding:45px;
+
+      text-align:center;
+
+      box-shadow:
+      0 8px 32px rgba(0,0,0,0.25);
+
+      color:white;
+    }
+
+    h1{
+      font-size:32px;
+      margin-bottom:15px;
+      font-weight:700;
+    }
+
+    p{
+      font-size:17px;
+      line-height:1.6;
+      opacity:0.9;
+      margin-bottom:35px;
+    }
+
+    button{
+
+      background:white;
+
+      color:#2563eb;
+
+      border:none;
+
+      padding:16px 36px;
+
+      border-radius:14px;
+
+      font-size:18px;
+
+      font-weight:bold;
+
+      cursor:pointer;
+
+      transition:0.25s;
+    }
+
+    button:hover{
+
+      transform:translateY(-3px) scale(1.03);
+
+      box-shadow:
+      0 10px 20px rgba(0,0,0,0.25);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h1>Customer Perception Survey</h1>
+
+    <p>
+      Click below to begin the survey.
+    </p>
+
+    <button onclick="goSurvey()">
+
+      Start Survey
+
+    </button>
+
+  </div>
+
+<script>
+
+function goSurvey(){
+
+const links = [
+
+"https://docs.google.com/forms/d/e/1FAIpQLSeXkzst0ll-PXSntdpMBSoCYNyevmVuuQQ26_OPZQuOhDbGFA/viewform?usp=dialog",
+
+"https://docs.google.com/forms/d/e/1FAIpQLSd1V3IJn89sPfUJFFm2A42zjOfmz-uz-VRiAyN_iHuosk7gsA/viewform?usp=dialog"
+
+];
+
+const randomLink =
+links[Math.floor(Math.random() * links.length)];
+
+window.location.href = randomLink;
+
+}
+
+</script>
+
+</body>
+
+</html>
